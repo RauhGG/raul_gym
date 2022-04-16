@@ -7,6 +7,7 @@ RegisterServerEvent('rsx_gym:comprarpowerade', function()
     if dinero >= precio then
         TriggerClientEvent('esx:showNotification', source, 'Has comprado un Powerade')
         xPlayer.addInventoryItem('powerade', 1)
+        xPlayer.removeMoney(precio)
     else
         TriggerClientEvent('esx:showNotification', source, 'No tienes dinero') 
     end
@@ -19,6 +20,7 @@ RegisterServerEvent('rsx_gym:comprarproteinshake', function()
     if dinero >= precio then
         TriggerClientEvent('esx:showNotification', source, 'Has comprado un batido de proteinas')
         xPlayer.addInventoryItem('proteinshake', 1)
+        xPlayer.removeMoney(precio)
     else
         TriggerClientEvent('esx:showNotification', source, 'No tienes dinero') 
     end
